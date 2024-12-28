@@ -19,6 +19,28 @@ class Truck{
   topSpeed: number;
   wheels: Wheel[];
   towingCapacity: number;
+
+constructor(
+  vin: number,
+  color: string,
+  make: string,
+  model: string,
+  year: number,
+  weight: number,
+  topSpeed: number,
+  wheels: Wheel[],
+  towingCapacity: number,
+)  {
+  this.vin = vin;
+  this.color = color;
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.weight = weight;
+  this.topSpeed = topSpeed;
+  this.wheels =  wheels;
+  this.towingCapacity = towingCapacity;
+} 
 }
 
 class Vehicle {
