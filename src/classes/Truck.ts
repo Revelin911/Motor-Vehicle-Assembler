@@ -15,26 +15,31 @@ class Truck extends Vehicle implements AbleToTow {
   public topSpeed: number;
   public wheels: Wheel[];
   public towingCapacity: number;
+  public make: string;
+  public model: string; 
 
 constructor(
   vin: string,
   color: string,
-  make: string,
-  model: string,
   year: number,
   weight: number,
   topSpeed: number,
   wheels: Wheel[],
   towingCapacity: number,
+  make: string,
+  model: string,
 )  // TODO: Create a constructor that accepts the properties of the Truck class
   // TODO: The constructor should call the constructor of the parent class, Vehicle
     // TODO: The constructor should initialize the properties of the Truck class
     // TODO: The constructor should check if the wheels array has 4 elements and create 4 new default Wheel objects if it does not
   {
-    super(vin, color, make, model, year );
+    super();
+    
     this.weight = weight;
     this.topSpeed = topSpeed;
   this.towingCapacity = towingCapacity;
+  this.make = make;
+  this.model = model;
 
   if (wheels.length !== 4) {
       this.wheels = Array(4).fill(null).map(() => new Wheel(16));
