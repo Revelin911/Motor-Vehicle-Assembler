@@ -50,7 +50,7 @@ vehicles.push(truck1);
 vehicles.push(car1);
 
 // TODO: uncomment once motorbikes are implemented
-// vehicles.push(motorbike1);
+vehicles.push(motorbike1);
 
 // create a new instance of the Cli class
 const cli = new Cli(vehicles);
