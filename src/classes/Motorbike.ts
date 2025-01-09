@@ -42,7 +42,7 @@ this.topSpeed = topSpeed;
     
     // TODO: The constructor should check if the wheels array has 2 elements and create 2 new default Wheel objects if it does not
     if (wheels.length !== 2) {
-      this.wheels = Array(2).fill(null).map(() => new Wheel(8));
+      this.wheels = Array(2).fill(null).map(() => new Wheel());
     } else {
       this.wheels = wheels;
     }

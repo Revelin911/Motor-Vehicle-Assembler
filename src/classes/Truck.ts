@@ -11,6 +11,9 @@ import AbleToTow from '../interfaces/AbleToTow.js';
 // TODO: The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[]), towingCapacity (number)
 // TODO: The Truck class should extend the Vehicle class and should implement the AbleToTow interface
 class Truck extends Vehicle implements AbleToTow {
+  public vin: string;
+  public color: string;
+  public year: number;
   public weight: number;
   public topSpeed: number;
   public wheels: Wheel[];
@@ -34,7 +37,9 @@ constructor(
     // TODO: The constructor should check if the wheels array has 4 elements and create 4 new default Wheel objects if it does not
   {
     super();
-    
+    this.vin = vin;
+  this.color = color;
+  this.year = year;
     this.weight = weight;
     this.topSpeed = topSpeed;
   this.towingCapacity = towingCapacity;
@@ -42,7 +47,7 @@ constructor(
   this.model = model;
 
   if (wheels.length !== 4) {
-      this.wheels = Array(4).fill(null).map(() => new Wheel(16));
+      this.wheels = Array(4).fill(null).map(() => new Wheel());
     } else {
       this.wheels = wheels;
     }
