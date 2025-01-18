@@ -184,13 +184,13 @@ class Cli {
           // TODO: The generateVin method is static and should be called using the class name Cli, make sure to use Cli.generateVin() for creating a truck and motorbike as well!
           Cli.generateVin(),
           answers.color,
+          answers.make,
+          answers.model,
           parseInt(answers.year),
           parseInt(answers.weight),
           parseInt(answers.topSpeed),
           [],
-          parseInt(answers.towingCapacity),
-          answers.make,
-          answers.model
+          parseInt(answers.towingCapacity)
         );
         // push the car to the vehicles array
         this.vehicles.push(truck);
@@ -405,21 +405,29 @@ class Cli {
           // TODO: add statements to perform the tow action only if the selected vehicle is a truck. Call the findVehicleToTow method to find a vehicle to tow and pass the selected truck as an argument. After calling the findVehicleToTow method, you will need to return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous.
           let truck: Truck;
           for (let i = 0; i < this.vehicles.length; i++) {
-            if (this.vehicles[i].vin === this.selectedVehicleVin && this.vehicles[i] instanceof Truck) {
-              truck = this.vehicles[i] as Truck;
-              if (truck) {
-                this.findVehicleToTow(truck)
+            if (this.vehicles[i].vin === this.selectedVehicleVin) {
+              if(this.vehicles[i] instanceof Truck) {
+                truck = this.vehicles[i] as Truck;
+                if (truck) {
+                  return this.findVehicleToTow(truck)
+                }
+              } else {
+                console.log("Only trucks can tow!")
               }
             }
           }
-          return
         }
         // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
         else if (answers.action === 'Wheelie') {
           let motorbike: Motorbike;
           for (let i = 0; i < this.vehicles.length; i++) {
-            if (this.vehicles[i].vin === this.selectedVehicleVin && this.vehicles[i] instanceof Motorbike) {
-              motorbike = this.vehicles[i] as Motorbike;
+            if (this.vehicles[i].vin === this.selectedVehicleVin) {
+              if(this.vehicles[i] instanceof Motorbike) {
+                motorbike = this.vehicles[i] as Motorbike;
+                motorbike.wheelie();
+              } else {
+                console.log("Only motorbikes can perform wheelie!")
+              }
             }
           }
         }
