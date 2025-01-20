@@ -25,7 +25,7 @@ class Vehicle {
   }
   }
 
-// TODO: uncomment once trucks are implemented
+// creating truck instance with all properties
 const truck1 = new Truck(
   Cli.generateVin(),
   "red", 
@@ -50,16 +50,15 @@ const car1 = new Car(
   []
 );
 
-// TODO: uncomment once motorbikes are implemented
+// creating motorbike instance with all properties
 const motorbike1Wheels = [new Wheel(17, "Michelin"), new Wheel(17, "Michelin")];
 const motorbike1 = new Motorbike(Cli.generateVin(), "black", "Harley Davidson", "Sportster", 2021, 500, 125, motorbike1Wheels);
 
 // push vehicles to array
-// TODO: uncomment once trucks are implemented
 vehicles.push(truck1);
 vehicles.push(car1);
 
-// TODO: uncomment once motorbikes are implemented
+// push motorbike to array
 vehicles.push(motorbike1);
 
 // create a new instance of the Cli class
