@@ -6,8 +6,6 @@ This vehicle assembler helps facilitate searching for vehicles in instances. Thi
 
 ## Table of Contents
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
@@ -15,15 +13,11 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-These will be the following downloads/ installations that will be necessary.For starters, these libraries will need to be downloaded onto your computer. VS Code, or some sort of code editor, will need to be downloaded as well. Inside the code editor, you will need to the Inquirer package down loaded.
+These will be the following downloads/ installations that will be necessary. For starters, these libraries will need to be downloaded onto your computer. VS Code, or some sort of code editor, will need to be downloaded as well. Inside the code editor, you will need the Inquirer package downloaded. Running "npm i" in the command terminal will install all the node modules you will need. 
 
 ## Usage
 
-In order for this project to work properly, you will need to download the libraries onto your local device for use with your code editor. In the code editor, you will open up a terminal and begin downloading the Inquirer package. You may use the command "npm i inquirer" and this will install the package. To begin using the application type "npm start" into the terminal. This should begin running the application.
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+In order for this project to work properly, you will need to download the libraries onto your local device for use with your code editor. In the code editor, you will open up a terminal and begin installing the node modules. To begin using the application type "npm run start" into the terminal. You will begin with a question to choose from an existing vehicle or to create a new vehicle. After this, you will be redirected to different prompts. Each line will ask you a new prompt according to previous response. 
 
 ## Credits
 
@@ -55,4 +49,10 @@ SOFTWARE.
 
 ## Tests
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+This should begin running the application. The first question below will show up in the terminal:
+    ![Initial vehicle selection](assets/images/Initial%20Prompt.png)
+
+Once you choose a vehicle, it redirect to a following question. The picture below is demonstating with the choice of an already exising vehicle:
+    ![Following Prompts](assets/images/Following%20Prompt.png)
+
+This is just demonstrating some of the initial prompts that will show up. With each selection made, you will be redirected to a new prompt until you would like to exit.
